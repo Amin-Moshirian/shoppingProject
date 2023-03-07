@@ -1,0 +1,214 @@
+/* Loading for order page */
+.loader {
+  width: 160px;
+  height: 185px;
+  position: relative;
+  background: #fff;
+  border-radius: 100px 100px 0 0;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 125px;
+  left: 50%;
+  top: 25px;
+  transform: translateX(-50%);
+  background-image: radial-gradient(circle, #000 48%, transparent 55%),
+    radial-gradient(circle, #000 48%, transparent 55%),
+    radial-gradient(circle, #fff 30%, transparent 45%),
+    radial-gradient(circle, #000 48%, transparent 51%),
+    linear-gradient(#000 20px, transparent 0),
+    linear-gradient(#cfecf9 60px, transparent 0),
+    radial-gradient(circle, #cfecf9 50%, transparent 51%),
+    radial-gradient(circle, #cfecf9 50%, transparent 51%);
+  background-repeat: no-repeat;
+  background-size: 16px 16px, 16px 16px, 10px 10px, 42px 42px, 12px 3px,
+    50px 25px, 70px 70px, 70px 70px;
+  background-position: 25px 10px, 55px 10px, 36px 44px, 50% 30px, 50% 85px,
+    50% 50px, 50% 22px, 50% 45px;
+  animation: faceLift 3s linear infinite alternate;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  width: 140%;
+  height: 125px;
+  left: -20%;
+  top: 0;
+  background-image: radial-gradient(circle, #fff 48%, transparent 50%),
+    radial-gradient(circle, #fff 48%, transparent 50%);
+  background-repeat: no-repeat;
+  background-size: 65px 65px;
+  background-position: 0px 12px, 145px 12px;
+  animation: earLift 3s linear infinite alternate;
+}
+
+@keyframes faceLift {
+  0% {
+    transform: translateX(-60%);
+  }
+
+  100% {
+    transform: translateX(-30%);
+  }
+}
+
+@keyframes earLift {
+  0% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* ________________________________________________________________ */
+
+
+
+
+
+/* Loading for home page */
+.loader1 {
+  position: relative;
+  font-size: 48px;
+  letter-spacing: 6px;
+}
+
+.loader1:before {
+  content: "Loading";
+  color: #fff;
+}
+
+.loader1:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #ff3d00;
+  background-image: radial-gradient(circle 2px, #fff4 100%, transparent 0),
+    radial-gradient(circle 1px, #fff3 100%, transparent 0);
+  background-position: 14px -4px, 12px -1px;
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  top: -5px;
+  right: 66px;
+  transform-origin: center bottom;
+  animation: fillBaloon 1s ease-in-out infinite alternate;
+}
+
+@keyframes fillBaloon {
+  0% {
+    transform: scale(1)
+  }
+
+  100% {
+    transform: scale(3)
+  }
+}
+
+/* ________________________________________________________________ */
+
+
+
+
+
+/* Loading for single order page */
+.loader2 {
+  position: relative;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background: red;
+  border: 8px solid #131a1d;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.loader2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #263238;
+  z-index: 5;
+  border-bottom: 8px solid #131a1d;
+  box-sizing: border-box;
+  animation: eyeShade 3s infinite;
+}
+
+.loader2::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+  width: 32px;
+  z-index: 2;
+  height: 32px;
+  background: #111;
+  border-radius: 50%;
+  animation: eyeMove 3s infinite;
+}
+
+@keyframes eyeShade {
+  0% {
+    transform: translateY(0)
+  }
+
+  20% {
+    transform: translateY(5px)
+  }
+
+  40%,
+  50% {
+    transform: translateY(-5px)
+  }
+
+  60% {
+    transform: translateY(-8px)
+  }
+
+  75% {
+    transform: translateY(5px)
+  }
+
+  100% {
+    transform: translateY(10px)
+  }
+}
+
+@keyframes eyeMove {
+  0% {
+    transform: translate(0, 0)
+  }
+
+  20% {
+    transform: translate(0px, 5px)
+  }
+
+  40%,
+  50% {
+    transform: translate(0px, -5px)
+  }
+
+  60% {
+    transform: translate(-10px, -5px)
+  }
+
+  75% {
+    transform: translate(-20px, 5px)
+  }
+
+  100% {
+    transform: translate(0, 10px)
+  }
+}
+
+/* ________________________________________________________________ */
