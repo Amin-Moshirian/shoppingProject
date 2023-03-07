@@ -71,7 +71,7 @@ const Cart = () => {
     <div>
       {!cart.cart.length ? (
         <div className="flex mt-16 justify-center items-center">
-          <p className="text-5xl">There is no product in your cart</p>
+          <p className="xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl">There is no product in your cart</p>
         </div>
       ) : (
         <div>
@@ -150,7 +150,7 @@ const Cart = () => {
             pathHandler();
           }}
         >
-          <span className="text-3xl mr-2 mb-1">Next</span>
+          <span className=" mr-2 mb-1 xl:text-3xl lg:text-2xl md:text-xl sm:text-xl">Next</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
