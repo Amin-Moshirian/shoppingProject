@@ -11,7 +11,7 @@ const Order = () => {
   const req = async () => {
     setLoading(true);
     try {
-      const { data } = await axios.get("http://kzico.runflare.run/order/", {
+      const { data } = await axios.get("https://kzico.runflare.run/order/", {
         headers: {
           authorization: `bearer ${localStorage.getItem("Token")}`,
         },

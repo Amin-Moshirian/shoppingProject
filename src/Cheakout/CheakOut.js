@@ -22,7 +22,7 @@ const CheakOut = () => {
   const cheak = async () => {
     try {
       const { data } = await axios.post(
-        "http://kzico.runflare.run/order/submit",
+        "https://kzico.runflare.run/order/submit",
         {
           orderItems: cart.cart.map((item) => {
             return {

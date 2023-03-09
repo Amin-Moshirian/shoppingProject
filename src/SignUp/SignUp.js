@@ -59,7 +59,7 @@ const SignUp = () => {
   const req = async () => {
     try {
       const { data } = await axios.post(
-        "http://kzico.runflare.run/user/signup",
+        "https://kzico.runflare.run/user/signup",
         {
           username: userName.value,
           email: email.value,
