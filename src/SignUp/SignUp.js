@@ -31,7 +31,8 @@ const SignUp = () => {
   const [password, setPassword] = useState({
     value: "",
     isTouched: false,
-    error: "Password is not valid!",
+    error:
+      "Password must contain at least one letter, at least one number, and be longer than six charaters.",
     isValid: false,
   });
   // ______________________________________________________________________________
@@ -97,8 +98,7 @@ const SignUp = () => {
   // Regexes
   const userNameRegex = /^(?=[a-zA-Z0-9._]{5,20}$)(?!.*[_.]{2})[^_.].*[^_.]$/;
   const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-  const passwordRegex =
-    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+  const passwordRegex = /^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/;
   const phoneNumberRegex = /^(?:0|98|\+98|\+980|0098|098|00980)?(9\d{9})$/;
   //________________________________________________________________________________
   return (
