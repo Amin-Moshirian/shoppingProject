@@ -21,7 +21,7 @@ const Order = () => {
       setError("");
     } catch (error) {
       setLoading(false);
-      setError(error.message);
+      setError(error.response.data.message);
     }
   };
   useEffect(() => {
