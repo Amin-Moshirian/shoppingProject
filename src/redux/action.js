@@ -12,7 +12,7 @@ export const getData = () => async (dispatch) => {
     const { data } = await axios.get("https://kzico.runflare.run/product/");
     dispatch({
       type: "succses",
-      payload: { data: [...data], loading: false, error: "" },
+      payload: { data: [...data], loading: true, error: "" },
     });
   } catch (error) {
     dispatch({

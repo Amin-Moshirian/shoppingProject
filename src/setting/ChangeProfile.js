@@ -58,7 +58,7 @@ const ChangeProfile = () => {
   };
 
   return (
-    <div className="mt-10 xl:ml-96	lg:ml-80 md:ml-62 sm:ml-62">
+    <div className="mt-10 xl:ml-96	lg:ml-80 md:ml-62 sm:ml-62 xsm:ml-62 xxsm:ml-62">
       <div className="mt-16 flex flex-col justify-center items-center ">
         <h3 className="mb-10">Profile info</h3>
         <form className="w-full max-w-sm" onSubmit={(e) => e.preventDefault()}>

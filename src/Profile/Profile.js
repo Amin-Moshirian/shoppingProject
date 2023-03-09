@@ -13,7 +13,7 @@ const Profile = () => {
   }, []);
 
   return (
-    <div className="flex w-2/5 rounded-xl border-2 border-black my-12 mx-auto justify-center">
+    <div className="lg: w-2/5 md: w-2/5 sm: w-3/5 xsm: w-4/5 xxsm: w-4/5 flex rounded-xl border-2 border-black my-12 mx-auto justify-center">
       <div className="flex flex-col items-center">
         <div>
           <img

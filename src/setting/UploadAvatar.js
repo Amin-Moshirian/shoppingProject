@@ -50,20 +50,28 @@ const UploadAvatar = () => {
 
   return (
     <div className="mt-10 xl:ml-96	lg:ml-80 md:ml-62 sm:ml-62">
-      <form
-        className="flex flex-col gap-4"
-        onSubmit={(e) => e.preventDefault()}
-      >
-        <input type="file" onChange={(e) => setPic(e.target.files[0])}></input>
+      <from className="flex flex-col gap-4">
+        <label
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          for="file_input"
+        >
+          Upload file
+        </label>
+        <input
+          class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+          id="file_input"
+          type="file"
+          onChange={(e) => setPic(e.target.files[0])}
+        ></input>
 
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full "
           type="submit"
           onClick={() => req()}
         >
           Upload
         </button>
-      </form>
+      </from>
     </div>
   );
 };

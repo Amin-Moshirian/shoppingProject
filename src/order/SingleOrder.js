@@ -9,6 +9,7 @@ const SingleOrder = () => {
   const [error, setError] = useState("");
 
   const req = async () => {
+    setLoading(true);
     try {
       const { data } = await axios.get("https://kzico.runflare.run/order/", {
         headers: {
@@ -53,7 +54,7 @@ const SingleOrder = () => {
                     return (
                       <div
                         key={i._id}
-                        className="flex py-6 border-b border-black  xl:flex-row lg:flex-col md:flex-col sm:flex-col"
+                        className="flex py-6 border-b border-black  xl:flex-row lg:flex-col md:flex-col sm:flex-col xsm:flex-col xxsm:flex-col"
                       >
                         <div>
                           <img
@@ -90,8 +91,8 @@ const SingleOrder = () => {
                   <div className="flex justify-center mx-auto my-6 ">
                     <h3> Shipping and payment info </h3>
                   </div>
-                  <div className="flex p-6 justify-between items-center xl:flex-row lg:flex-col md:flex-col sm:flex-col">
-                    <div className="xl:ml-6 xl:text-left lg:text-center md:text-center sm:text-center">
+                  <div className="flex p-6 justify-between items-center xl:flex-row lg:flex-col md:flex-col sm:flex-col xsm:flex-col xxsm:flex-col">
+                    <div className="xl:ml-6 xl:text-left lg:text-center md:text-center sm:text-center xsm:text-center xxsm:text-center">
                       <p className="my-4 text-lg font-normal">
                         City: {item.shippingAddress.city}
                       </p>
@@ -105,7 +106,7 @@ const SingleOrder = () => {
                         Postal code: {item.shippingAddress.postalCode}
                       </p>
                     </div>
-                    <div className="xl:mr-6 xl:text-left lg:text-center md:text-center sm:text-center">
+                    <div className="xl:mr-6 xl:text-left lg:text-center md:text-center sm:text-center xsm:text-center xxsm:text-center">
                       <p className="my-4 text-lg font-normal">
                         Payment method: {item.paymentMethod}
                       </p>

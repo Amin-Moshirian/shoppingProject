@@ -4,7 +4,7 @@ import { Link, Outlet } from "react-router-dom";
 const Setting = () => {
   return (
     <div className="flex">
-      <div className="flex flex-col h-screen p-3 bg-gray-800 shadow w-60  mr-20">
+      <div className="flex flex-col h-screen p-3 bg-gray-800 shadow w-60  lg:mr-20 md:mr-16 sm:mr-12 xsm:mr-8 xxsm:mr-4">
         <div className="space-y-3">
           <div className="flex items-center">
             <h2 className="text-xl font-bold text-white">Setting</h2>

@@ -29,11 +29,11 @@ const Header = () => {
   // _____________________________________________
   return (
     <header className="bg-blue-500">
-      <div className=" mx-10 content-center">
+      <div className="xxsm:mx-4 xsm:mx-4 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-10 content-center">
         <div className="flex justify-between">
           <div>
-            <div className="py-3">
-              <Link to={"/"} className="text-5xl text-white	no-underline">
+            <div className="py-4">
+              <Link to={"/"} className="xxsm:text-xl xsm:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white	no-underline">
                 Home
               </Link>
             </div>
@@ -50,10 +50,10 @@ const Header = () => {
               </div>
             )}
             <div
-              className="font-sans mr-8 block lg:inline-block align-middle text-black hover:text-gray-700 relative flex w-14 h-16  text-5xl"
+              className="font-sans xl:mr-8 lg:mr-8 md:mr-6 sm:mr-4 xsm:mr-2 xxsm:mr-2 block lg:inline-block align-middle text-black hover:text-gray-700 relative flex w-14 h-16  text-5xl"
               onClick={() => navigate("/cart")}
             >
-              <div class="font-sans block mt-4 lg:inline-block lg:mt-0 lg:ml-8 align-middle text-black hover:text-gray-700 ml-8">
+              <div class="font-sans block mt-4 lg:inline-block lg:mt-0 lg:ml-8 md:ml-6 sm:ml-4 xsm:ml-2 xxsm:ml-2 align-middle text-black hover:text-gray-700 ml-8">
                 <Link
                   to={"/cart"}
                   role="button"
@@ -62,7 +62,8 @@ const Header = () => {
                   <img
                     className="flex-1 w-10 h-10 fill-current relative flex mr-8"
                     src={imgCart}
-                  />
+                  >
+                  </img>
 
                   <span className="absolute right-0 top-0 rounded-full bg-red-600 w-8 h-8 top right p-0 m-0 text-white font-mono text-sm  leading-tight text-center pt-2 text-5lg">
                     {quantity}
@@ -72,13 +73,13 @@ const Header = () => {
             </div>
 
             {data.success ? (
-              <div className="py-4 ml-8">
+              <div className="py-4 lg:ml-8 md:ml-6 sm:ml-4 xsm:ml-4 xxsm:ml-4">
                 <Menu as="div" className="relative inline-block text-left">
                   <div>
                     <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
                       Email
                       <ChevronDownIcon
-                        className="-mr-1 h-5 w-5 text-gray-400"
+                        className="mr-1 h-5 w-5 text-gray-400"
                         aria-hidden="true"
                       />
                     </Menu.Button>
@@ -180,7 +181,7 @@ const Header = () => {
               </div>
             ) : (
               <div className="py-4 ml-8">
-                <Link to={"/login"} className="text-4xl text-white	no-underline">
+                <Link to={"/login"} className="xxsm:text-xl xsm:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl text-white	no-underline">
                   Login
                 </Link>
               </div>
