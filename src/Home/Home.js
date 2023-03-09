@@ -45,20 +45,26 @@ const Home = () => {
                 >
                   <div className="flex flex-col justify-center items-center">
                     <img className="w-96 my-8" src={item.image}></img>
-                    <p className="mb-8 lg:text-4xl md:text-3xl sm:text-2xl xsm:text-2xl xxsm:text-2xl  text-center	">{item.name}</p>
+                    <p className="mb-8 lg:text-4xl md:text-3xl sm:text-2xl xsm:text-2xl xxsm:text-2xl  text-center	">
+                      {item.name}
+                    </p>
                     <p className="mb-8 text-red-600 lg:text-2xl md:text-2xl sm:text-xl xsm:text-xl xxsm:text-xl">
                       Stock: {item.countInStock}
                     </p>
                   </div>
                   <div className="flex flex-row justify-between">
-                    <p className="ml-6 lg:text-2xl md:text-2xl sm:text-xl xsm:text-xl xxsm:text-xl">{item.price}$</p>
-                    <p className="mr-6 lg:text-2xl md:text-2xl sm:text-xl xsm:text-xl xxsm:text-xl">Rating: {item.rating}</p>
+                    <p className="ml-6 lg:text-2xl md:text-2xl sm:text-xl xsm:text-xl xxsm:text-xl">
+                      {item.price}$
+                    </p>
+                    <p className="mr-6 lg:text-2xl md:text-2xl sm:text-xl xsm:text-xl xxsm:text-xl">
+                      Rating: {item.rating}
+                    </p>
                   </div>
                 </div>
               );
             })}
           </div>
-          <div >
+          <div>
             <Pagination className="justify-center my-12">
               <Pagination.First onClick={() => setPage(1)} />
               <Pagination.Prev

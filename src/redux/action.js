@@ -26,11 +26,14 @@ export const getData = () => async (dispatch) => {
 //Function for recive user information after login
 export const getProfile = () => async (dispatch, getState) => {
   try {
-    const { data } = await axios.get("https://kzico.runflare.run/user/profile", {
-      headers: {
-        Authorization: `bearer ${localStorage.getItem("Token")}`,
-      },
-    });
+    const { data } = await axios.get(
+      "https://kzico.runflare.run/user/profile",
+      {
+        headers: {
+          Authorization: `bearer ${localStorage.getItem("Token")}`,
+        },
+      }
+    );
     localStorage.setItem("user", JSON.stringify(data.user));
     dispatch({
       type: "succses-login",

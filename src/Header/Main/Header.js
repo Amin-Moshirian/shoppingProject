@@ -33,7 +33,10 @@ const Header = () => {
         <div className="flex justify-between">
           <div>
             <div className="py-4">
-              <Link to={"/"} className="xxsm:text-xl xsm:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white	no-underline">
+              <Link
+                to={"/"}
+                className="xxsm:text-xl xsm:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white	no-underline"
+              >
                 Home
               </Link>
             </div>
@@ -62,8 +65,7 @@ const Header = () => {
                   <img
                     className="flex-1 w-10 h-10 fill-current relative flex mr-8"
                     src={imgCart}
-                  >
-                  </img>
+                  ></img>
 
                   <span className="absolute right-0 top-0 rounded-full bg-red-600 w-8 h-8 top right p-0 m-0 text-white font-mono text-sm  leading-tight text-center pt-2 text-5lg">
                     {quantity}
@@ -181,7 +183,10 @@ const Header = () => {
               </div>
             ) : (
               <div className="py-4 ml-8">
-                <Link to={"/login"} className="xxsm:text-xl xsm:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl text-white	no-underline">
+                <Link
+                  to={"/login"}
+                  className="xxsm:text-xl xsm:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl text-white	no-underline"
+                >
                   Login
                 </Link>
               </div>
