@@ -54,6 +54,7 @@ const ChangeProfile = () => {
         theme: "colored",
         type: "error",
       });
+      console.log(error);
     }
   };
 

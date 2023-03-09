@@ -34,7 +34,7 @@ const ChangePassword = () => {
       setOldPassword("");
       setNewPassword("");
     } catch (error) {
-      toast(error.message, {
+      toast(error.response.data.message, {
         position: "top-center",
         autoClose: 3000,
         hideProgressBar: false,

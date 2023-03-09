@@ -21,7 +21,7 @@ const SingleOrder = () => {
       setError("");
     } catch (error) {
       setLoading(false);
-      setError(error.message);
+      setError(error.response.data.message);
     }
   };
 
@@ -33,7 +33,11 @@ const SingleOrder = () => {
     <div>
       {loading ? (
         <div className="flex justify-center h-screen items-center">
-          <span className="loader2">Loading</span>
+          <div className="container">
+            <div className="loader1"></div>
+            <div className="loader1"></div>
+            <div className="loader1"></div>
+          </div>
         </div>
       ) : error ? (
         <div className="flex justify-center h-screen items-center">

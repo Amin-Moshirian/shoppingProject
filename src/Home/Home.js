@@ -24,9 +24,15 @@ const Home = () => {
   return (
     <div>
       {loading ? (
-        <div className="flex justify-center h-screen items-center m">
-          <span className="loader1"></span>
-        </div>
+        <div className="flex h-screen justify-center items-center">
+        <div className="loader">
+     <div className="box-1">
+     </div>
+     <span>
+         Loading.....
+     </span>
+ </div>
+     </div>
       ) : error ? (
         <div className="flex justify-center h-screen items-center">
           <span className="text-6xl bg-red-100 text-red-800 text-xs text-5xl font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300 text-5xl">
@@ -44,7 +50,10 @@ const Home = () => {
                   onClick={() => navigate(`/product-view/${item._id}`)}
                 >
                   <div className="flex flex-col justify-center items-center">
-                    <img className="w-96 my-8" src={item.image}></img>
+                    <img
+                      className="xl:w-72 lg:w-64 md:w-60 sm:w-56 xsm:w-52 xxsm:w-48  my-8"
+                      src={item.image}
+                    ></img>
                     <p className="mb-8 lg:text-4xl md:text-3xl sm:text-2xl xsm:text-2xl xxsm:text-2xl  text-center	">
                       {item.name}
                     </p>

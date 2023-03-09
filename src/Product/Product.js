@@ -18,7 +18,10 @@ const Product = () => {
           className="sm:3/5 lg:w-1/2 flex mt-10 flex-col justify-center items-center bg-gray-200 mx-auto rounded-lg"
         >
           <div className="flex flex-col justify-center items-center">
-            <img className="w-96 my-8" src={item.image}></img>
+            <img
+              className="xl:w-72 lg:w-64 md:w-60 sm:w-56 xsm:w-52 xxsm:w-48 my-8"
+              src={item.image}
+            ></img>
             <p className="mb-8 text-center sm: text-2xl md:text-2xl lg:text-4xl">
               {item.name}
             </p>

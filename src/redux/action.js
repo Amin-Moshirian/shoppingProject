@@ -17,7 +17,7 @@ export const getData = () => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: "failed",
-      payload: { data: [], loading: false, error: error.message },
+      payload: { data: [], loading: false, error: error.response.data.message },
     });
   }
 };
