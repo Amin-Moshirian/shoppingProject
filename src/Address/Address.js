@@ -10,14 +10,14 @@ const Address = () => {
   const [address, setAddress] = useState("");
   const [postalCode, setPostalCode] = useState("");
   const [phone, setPhone] = useState("");
-  // ______________________________________________________________
+  // _____________________________________________________________
 
   // Save values in local storage
   localStorage.setItem("address", address);
   localStorage.setItem("city", city);
   localStorage.setItem("postalCode", postalCode);
   localStorage.setItem("phone", phone);
-  // ______________________________________________________________
+  // _____________________________________________________________
 
   // Function to check that the user does not send empty values
   const pathHandling = () => {
