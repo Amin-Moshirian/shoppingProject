@@ -9,7 +9,7 @@ export const getData = () => async (dispatch) => {
       type: "loading",
       payload: { data: [], loading: true, error: "" },
     });
-    const { data } = await axios.get("http://kzico.runflare.run/product/");
+    const { data } = await axios.get("https://kzico.runflare.run/product/");
     dispatch({
       type: "succses",
       payload: { data: [...data], loading: false, error: "" },
@@ -26,7 +26,7 @@ export const getData = () => async (dispatch) => {
 //Function for recive user information after login
 export const getProfile = () => async (dispatch, getState) => {
   try {
-    const { data } = await axios.get("http://kzico.runflare.run/user/profile", {
+    const { data } = await axios.get("https://kzico.runflare.run/user/profile", {
       headers: {
         Authorization: `bearer ${localStorage.getItem("Token")}`,
       },
