@@ -65,7 +65,9 @@ const Order = () => {
                 className="bg-orange-400 w-11/12 mt-8 mb-16 mx-auto rounded-xl"
               >
                 <div className="flex border-b border-black justify-center	">
-                  <h3 className="my-6 mx-auto">Order Number: {index + 1}</h3>
+                  <h3 className="text-3xl my-6 mx-auto">
+                    Order Number: {index + 1}
+                  </h3>
                 </div>
                 {item.orderItems.map((i) => {
                   return (
@@ -77,33 +79,33 @@ const Order = () => {
                         <img src={i.product.image} className="w-52  p-6"></img>
                       </div>
                       <div>
-                        <p className="mt-6 px-6 text-lg font-normal">
+                        <p className="px-4 my-4 text-lg font-normal">
                           Name: {i.product.name}
                         </p>
-                        <p className="px-6 text-lg font-normal">
+                        <p className="px-4 my-4 text-lg font-normal">
                           Brand: {i.product.brand}
                         </p>
-                        <p className="px-6 text-lg font-normal">
+                        <p className="px-4 my-4 text-lg font-normal">
                           Color: {i.product.color}
                         </p>
-                        <p className="px-6 text-lg font-normal">
+                        <p className="px-4 my-4 text-lg font-normal">
                           Category: {i.product.category}
                         </p>
-                        <p className="px-6 text-lg font-normal">
+                        <p className="px-4 my-4 text-lg font-normal">
                           Description: {i.product.description}
                         </p>
-                        <p className="px-6 text-lg font-normal">
+                        <p className="px-4 my-4 text-lg font-normal">
                           Price: {i.product.price}$
                         </p>
-                        <p className="px-6 text-lg font-normal">
+                        <p className="px-4 my-4 text-lg font-normal">
                           Quantity: {i.qty}
                         </p>
                       </div>
                     </div>
                   );
                 })}
-                <div className="flex justify-center mx-auto my-6 ">
-                  <h3> Shipping and payment info </h3>
+                <div className="flex justify-center mx-auto mt-6 text-center">
+                  <h3 className="text-3xl"> Shipping and payment info </h3>
                 </div>
                 <div className="flex p-6 justify-between items-center xl:flex-row lg:flex-col md:flex-col sm:flex-col xsm:flex-col xxsm:flex-col">
                   <div className="xl:ml-6 xl:text-left lg:text-center md:text-center sm:text-center xsm:text-center xxsm:text-center">

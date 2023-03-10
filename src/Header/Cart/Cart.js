@@ -70,7 +70,7 @@ const Cart = () => {
   return (
     <div>
       {!cart.cart.length ? (
-        <div className="flex mt-16 justify-center items-center">
+        <div className="flex my-16 justify-center items-center">
           <p className="xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl ">
             There is no product in your cart
           </p>
@@ -83,13 +83,12 @@ const Cart = () => {
                 key={item._id}
                 className="w-3/5 mx-auto my-8 bg-orange-400 rounded-md"
               >
-                <div className="xxsm:flex-col xsm:flex-col sm:flex-col md:flex-col lg:flex-col xl:flex-row flex justify-around items-center h-auto p-4 ">
-                  <div>
+                <div className="xxsm:flex-col xsm:flex-col sm:flex-col md:flex-col lg:flex-col xl:flex-row flex justify-around items-center h-auto p-4 text-center">
+                  <div className="xl:mb-0 lg:mb-4 md:mb-4 sm:mb-4 xsm:mb-4 xxsm:mb-4">
                     <img src={item.image} className="w-40"></img>
                   </div>
-
-                  <p className="text-xl">{item.name}</p>
-                  <p className="text-xl">{item.quantity * item.price}$</p>
+                  <p className="lg:text-xl md:text-lg sm:text-md xsm:text-md xxsm:text-md text xl:mb-0 lg:mb-4 md:mb-4 sm:mb-4 xsm:mb-4 xxsm:mb-4">{item.name}</p>
+                  <p className="lg:text-xl md:text-lg sm:text-md xsm:text-md xxsm:text-md text xl:mb-0 lg:mb-4 md:mb-4 sm:mb-4 xsm:mb-4 xxsm:mb-4">{item.quantity * item.price}$</p>
                   <div className="flex">
                     {item.quantity === 1 ? (
                       <span
@@ -143,7 +142,7 @@ const Cart = () => {
         </div>
       )}
       <div className="w-3/5 mx-auto my-8 bg-pink-200 rounded-md flex justify-around items-center">
-        <p className="sm:text-xl md:text-2xl lg:text-3xl mt-3 ">
+        <p className="sm:text-xl md:text-2xl lg:text-3xl py-2 ">
           Total Price: {price}$
         </p>
         <div

@@ -134,31 +134,31 @@ const CheakOut = () => {
         return (
           <div
             key={item._id}
-            className="lg:w-3/5 md:w-3/5 sm:w-3/5 xsm:w-4/5 xxsm:w-4/5 mx-auto my-8 bg-orange-400 rounded-md p-4 "
+            className="w-4/5 mx-auto my-8 bg-orange-400 rounded-md p-4 "
           >
             <div className="xxsm:flex-col xsm:flex-col sm:flex-col  md:flex-col lg:flex-col xl:flex-row flex justify-around items-center h-auto">
               <div>
                 <img src={item.image} className="w-40 pb-4 p-2"></img>
               </div>
               <div className="xl:text-left lg:text-center md:text-center sm:text-center xsm:text-center xxsm:text-center">
-                <p className="lg:text-2xl md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
+                <p className="m-3 lg:text-xl md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
                   Name: {item.name}
                 </p>
-                <p className="lg:text-2xl md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
+                <p className="m-3 lg:text-xl md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
                   Brand: {item.brand}
                 </p>
-                <p className="lg:text-2xl md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
+                <p className="m-3 lg:text-xl md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
                   Color: {item.color}
                 </p>
               </div>
               <div className="xl:text-left lg:text-center md:text-center sm:text-center xsm:text-center xxsm:text-center">
-                <p className="lg:text-2xl md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
+                <p className="m-3 lg:text-xl md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
                   Category: {item.category}
                 </p>
-                <p className="lg:text-2xl md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
+                <p className="m-3 lg:text-xl md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
                   Price: {item.price}$
                 </p>
-                <p className="lg:text-2xl md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
+                <p className="m-3 lg:text-xl md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
                   Quantity: {item.quantity}
                 </p>
               </div>
@@ -166,21 +166,21 @@ const CheakOut = () => {
           </div>
         );
       })}
-      <div className="lg:w-3/5 md:w-3/5 sm:w-3/5 xsm:w-4/5 xxsm:w-4/5 mx-auto my-8 bg-blue-400 rounded-md p-3 flex text-center xl:flex-row lg:flex-col md:flex-col sm:flex-col xsm:flex-col xxsm:flex-col">
+      <div className="w-4/5 mx-auto my-8 bg-blue-400 rounded-md p-3 flex text-center xl:flex-row lg:flex-col md:flex-col sm:flex-col xsm:flex-col xxsm:flex-col">
         <div className="basis-1/2 flex flex-col p-2 ">
-          <h4 className="m-3 text-4xl lg:text-3xl md:text-2xl sm:text-2xl xsm:text-lg xxsm:text-lg">
+          <h4 className="m-3 text-3xl lg:text-2xl md:text-2xl sm:text-2xl xsm:text-lg xxsm:text-lg">
             Shipping address
           </h4>
-          <p className="m-3 lg:text-2xl text-white md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base	">
+          <p className="m-3 lg:text-xl text-white md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base	">
             Address: {localStorage.getItem("address")}
           </p>
-          <p className="m-3 lg:text-2xl text-white md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base	">
+          <p className="m-3 lg:text-xl text-white md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base	">
             City: {localStorage.getItem("city")}
           </p>
-          <p className="m-3 lg:text-2xl text-white md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base	">
+          <p className="m-3 lg:text-xl text-white md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base	">
             Postal code: {localStorage.getItem("postalCode")}
           </p>
-          <p className="m-3 lg:text-2xl text-white md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base	">
+          <p className="m-3 lg:text-xl text-white md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base	">
             Phone: {localStorage.getItem("phone")}
           </p>
           <button
@@ -193,19 +193,19 @@ const CheakOut = () => {
           </button>
         </div>
         <div className="basis-1/2 flex flex-col p-2 ">
-          <h4 className="m-3 text-4xl lg:text-3xl md:text-2xl sm:text-2xl xsm:text-lg xxsm:text-lg">
+          <h4 className="m-3 text-3xl lg:text-2xl md:text-2xl sm:text-2xl xsm:text-lg xxsm:text-lg">
             Shipping payment
           </h4>
-          <p className="m-3 lg:text-2xl text-white md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
+          <p className="m-3 lg:text-xl text-white md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
             Payment method: Cash
           </p>
-          <p className="m-3 lg:text-2xl text-white md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
+          <p className="m-3 lg:text-xl text-white md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
             Shipping price: 5$
           </p>
-          <p className="m-3 lg:text-2xl text-white md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
+          <p className="m-3 lg:text-xl text-white md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
             Price: {price}
           </p>
-          <p className="m-3 lg:text-2xl text-white md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
+          <p className="m-3 lg:text-xl text-white md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">
             Total price: {price + 5}
           </p>
           <div className="flex justify-around m-3">

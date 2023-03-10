@@ -18,13 +18,12 @@ const Setting = () => {
                   className="flex items-center p-2 space-x-3 rounded-md"
                 >
                   <svg
-                    className="text-white w-6"
+                    className="text-white w-6 h-6"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    class="w-6 h-6"
                   >
                     <path
                       stroke-linecap="round"
@@ -42,13 +41,12 @@ const Setting = () => {
                   className="flex items-center p-2 space-x-3 rounded-md"
                 >
                   <svg
-                    className="text-white w-6"
+                    className="text-white w-6 h-6"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    class="w-6 h-6"
                   >
                     <path
                       stroke-linecap="round"
@@ -66,13 +64,12 @@ const Setting = () => {
                   className="flex items-center p-2 space-x-3 rounded-md"
                 >
                   <svg
-                    className="text-white w-6"
+                    className="text-white w-6 h-6"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    class="w-6 h-6"
                   >
                     <path
                       stroke-linecap="round"

@@ -41,7 +41,7 @@ const Home = () => {
             {data.slice((page - 1) * 9, page * 9).map((item) => {
               return (
                 <div
-                  className="bg-gray-200 rounded-lg items-center cursor-pointer "
+                  className="bg-gray-200 rounded-lg items-center cursor-pointer p-4"
                   key={item._id}
                   onClick={() => navigate(`/product-view/${item._id}`)}
                 >

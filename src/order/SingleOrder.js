@@ -67,57 +67,59 @@ const SingleOrder = () => {
                           ></img>
                         </div>
                         <div>
-                          <p className="mt-6 px-6 text-lg font-normal">
+                          <p className="mt-4 px-4 text-lg font-normal">
                             Name: {i.product.name}
                           </p>
-                          <p className="px-6 text-lg font-normal">
+                          <p className="px-4 my-4 text-lg font-normal">
                             Brand: {i.product.brand}
                           </p>
-                          <p className="px-6 text-lg font-normal">
+                          <p className="px-4 my-4 text-lg font-normal">
                             Color: {i.product.color}
                           </p>
-                          <p className="px-6 text-lg font-normal">
+                          <p className="px-4 my-4 text-lg font-normal">
                             Category: {i.product.category}
                           </p>
-                          <p className="px-6 text-lg font-normal">
+                          <p className="px-4 my-4 text-lg font-normal">
                             Description: {i.product.description}
                           </p>
-                          <p className="px-6 text-lg font-normal">
+                          <p className="px-4 my-4 text-lg font-normal">
                             Price: {i.product.price}$
                           </p>
-                          <p className="px-6 text-lg font-normal">
+                          <p className="px-4 my-4 text-lg font-normal">
                             Quantity: {i.qty}
                           </p>
                         </div>
                       </div>
                     );
                   })}
-                  <div className="flex justify-center mx-auto my-6 ">
-                    <h3> Shipping and payment info </h3>
+                  <div className="flex justify-center mx-auto mt-6 text-center">
+                    <h3 className="text-3xl mx-auto">
+                      Shipping and payment info
+                    </h3>
                   </div>
-                  <div className="flex p-6 justify-between items-center xl:flex-row lg:flex-col md:flex-col sm:flex-col xsm:flex-col xxsm:flex-col">
+                  <div className="flex pb-6 px-6 justify-between items-center xl:flex-row lg:flex-col md:flex-col sm:flex-col xsm:flex-col xxsm:flex-col">
                     <div className="xl:ml-6 xl:text-left lg:text-center md:text-center sm:text-center xsm:text-center xxsm:text-center">
-                      <p className="my-4 text-lg font-normal">
+                      <p className="px-4 my-4 text-lg font-normal">
                         City: {item.shippingAddress.city}
                       </p>
-                      <p className="my-4 text-lg font-normal">
+                      <p className="px-4 my-4 text-lg font-normal">
                         Address: {item.shippingAddress.address}
                       </p>
-                      <p className="my-4 text-lg font-normal">
+                      <p className="px-4 my-4 text-lg font-normal">
                         Phone: {item.shippingAddress.phone}
                       </p>
-                      <p className="my-4 text-lg font-normal">
+                      <p className="px-4 my-4 text-lg font-normal">
                         Postal code: {item.shippingAddress.postalCode}
                       </p>
                     </div>
                     <div className="xl:mr-6 xl:text-left lg:text-center md:text-center sm:text-center xsm:text-center xxsm:text-center">
-                      <p className="my-4 text-lg font-normal">
+                      <p className="px-4 my-4 text-lg font-normal">
                         Payment method: {item.paymentMethod}
                       </p>
-                      <p className="my-4 text-lg font-normal">
+                      <p className="px-4 my-4 text-lg font-normal">
                         Shipping price: {item.shippingPrice}$
                       </p>
-                      <p className="my-4 text-lg font-normal">
+                      <p className="px-4 my-4 text-lg font-normal">
                         Total price: {item.totalPrice}$
                       </p>
                     </div>

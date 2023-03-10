@@ -35,7 +35,7 @@ const Header = () => {
             <div className="py-4">
               <Link
                 to={"/"}
-                className="xxsm:text-xl xsm:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white	no-underline"
+                className="xxsm:text-3xl xsm:text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-white	no-underline"
               >
                 Home
               </Link>
@@ -43,20 +43,21 @@ const Header = () => {
           </div>
 
           <div className="flex">
-            <div className="py-3"></div>
-            {data.success && (
-              <div className="mt-3 ">
-                <img
-                  src={data.user?.image}
-                  className="w-14 h-14 rounded-full"
-                ></img>
-              </div>
-            )}
+            <div className="py-3">
+              {data.success && (
+                <div>
+                  <img
+                    src={data.user?.image}
+                    className="w-14 h-14 rounded-full"
+                  ></img>
+                </div>
+              )}
+            </div>
             <div
               className="font-sans xl:mr-8 lg:mr-8 md:mr-6 sm:mr-4 xsm:mr-2 xxsm:mr-2 block lg:inline-block align-middle text-black hover:text-gray-700 relative flex w-14 h-16  text-5xl"
               onClick={() => navigate("/cart")}
             >
-              <div class="font-sans block mt-4 lg:inline-block lg:mt-0 lg:ml-8 md:ml-6 sm:ml-4 xsm:ml-2 xxsm:ml-2 align-middle text-black hover:text-gray-700 ml-8">
+              <div className="font-sans block mt-5 lg:inline-block lg:ml-8 md:ml-6 sm:ml-4 xsm:ml-2 xxsm:ml-2 align-middle text-black hover:text-gray-700">
                 <Link
                   to={"/cart"}
                   role="button"
@@ -75,7 +76,7 @@ const Header = () => {
             </div>
 
             {data.success ? (
-              <div className="py-4 lg:ml-8 md:ml-6 sm:ml-4 xsm:ml-4 xxsm:ml-4">
+              <div className="mt-5 lg:ml-8 md:ml-6 sm:ml-4 xsm:ml-4 xxsm:ml-4">
                 <Menu as="div" className="relative inline-block text-left">
                   <div>
                     <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
@@ -182,10 +183,10 @@ const Header = () => {
                 </Menu>
               </div>
             ) : (
-              <div className="py-4 ml-8">
+              <div className="py-5 ml-8">
                 <Link
                   to={"/login"}
-                  className="xxsm:text-xl xsm:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl text-white	no-underline"
+                  className="xxsm:text-2xl xsm:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl text-white	no-underline"
                 >
                   Login
                 </Link>
