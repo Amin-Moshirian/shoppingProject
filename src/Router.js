@@ -63,8 +63,8 @@ const Router = () => {
       )}
 
       {data.success ? (
-        <Route path="/setting/change-profile" element={<Setting />}>
-          <Route path="/setting/change-profile" element={<ChangeProfile />} />
+        <Route path="/setting" element={<Setting />}>
+          <Route path="change-profile" element={<ChangeProfile />} />
           <Route path="change-password" element={<ChangePassword />} />
           <Route path="upload-avatar" element={<UploadAvatar />} />
         </Route>
