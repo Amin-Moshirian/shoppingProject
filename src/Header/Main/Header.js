@@ -132,7 +132,7 @@ const Header = () => {
                         <Menu.Item>
                           {({ active }) => (
                             <Link
-                              to="/setting"
+                              to="/setting/change-profile"
                               className={classNames(
                                 active
                                   ? "bg-gray-100 text-gray-900"

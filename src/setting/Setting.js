@@ -14,7 +14,7 @@ const Setting = () => {
             <ul className="pt-2 pb-4 space-y-1 text-sm">
               <li className="rounded-sm">
                 <Link
-                  to="change-profile"
+                  to="/setting/change-profile"
                   className="flex items-center p-2 space-x-3 rounded-md"
                 >
                   <svg

@@ -136,7 +136,7 @@ const CheakOut = () => {
             key={item._id}
             className="w-4/5 mx-auto my-8 bg-orange-400 rounded-md p-4 "
           >
-            <div className="xxsm:flex-col xsm:flex-col sm:flex-col  md:flex-col lg:flex-col xl:flex-row flex justify-around items-center h-auto">
+            <div className="xxsm:flex-col xsm:flex-col sm:flex-col  md:flex-col lg:flex-col xl:flex-row flex justify-between items-center h-auto">
               <div>
                 <img src={item.image} className="w-40 pb-4 p-2"></img>
               </div>
