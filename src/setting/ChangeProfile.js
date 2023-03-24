@@ -37,7 +37,7 @@ const ChangeProfile = () => {
   const req = async () => {
     try {
       const { data } = await axios.put(
-        "https://kzico.runflare.run/user/change-profile",
+        "http://kzico.runflare.run/user/change-profile",
         {
           firstname: firstName.value,
           lastname: lastName.value,
