@@ -135,7 +135,7 @@ const ChangeProfile = () => {
               <input
                 className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                 type="text"
-                value={firstName.value?.trim()}
+                value={firstName.value}
                 onChange={(e) =>
                   setFirstName((last) => {
                     return { ...last, value: e.target.value };
@@ -152,7 +152,7 @@ const ChangeProfile = () => {
                       ...last,
                       isTouched: true,
                       isValid:
-                        last.value?.length >= 3 &&
+                        last.value?.trim().length >= 3 &&
                         profileRegex.test(last.value),
                     };
                   })
@@ -174,7 +174,7 @@ const ChangeProfile = () => {
               <input
                 className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                 type="text"
-                value={lastName.value?.trim()}
+                value={lastName.value}
                 onChange={(e) =>
                   setLastName((last) => {
                     return { ...last, value: e.target.value };
@@ -191,7 +191,7 @@ const ChangeProfile = () => {
                       ...last,
                       isTouched: true,
                       isValid:
-                        last.value?.length >= 3 &&
+                        last.value?.trim().length >= 3 &&
                         profileRegex.test(last.value),
                     };
                   })
@@ -213,7 +213,7 @@ const ChangeProfile = () => {
               <input
                 className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                 type="text"
-                value={gender.value?.trim()}
+                value={gender.value}
                 onChange={(e) =>
                   setGender((last) => {
                     return { ...last, value: e.target.value };
@@ -250,7 +250,7 @@ const ChangeProfile = () => {
               <input
                 className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                 type="text"
-                value={age.value?.trim()}
+                value={age.value}
                 onChange={(e) =>
                   setAge((last) => {
                     return { ...last, value: e.target.value };
@@ -286,7 +286,7 @@ const ChangeProfile = () => {
               <input
                 className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                 type="text"
-                value={city.value?.trim()}
+                value={city.value}
                 onChange={(e) =>
                   setCity((last) => {
                     return { ...last, value: e.target.value };
@@ -303,7 +303,7 @@ const ChangeProfile = () => {
                       ...last,
                       isTouched: true,
                       isValid:
-                        last.value?.length >= 3 &&
+                        last.value?.trim().length >= 3 &&
                         profileRegex.test(last.value),
                     };
                   })

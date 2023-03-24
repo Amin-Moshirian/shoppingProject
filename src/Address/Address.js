@@ -28,15 +28,18 @@ const Address = () => {
     isValid: false,
     value: "",
     isTouched: false,
-    error:
-      "Phone number must be 11 numbers like example: 09*********",
+    error: "Phone number must be 11 numbers like example: 09*********",
   });
   // _____________________________________________________________
 
-  
   // Function to check that the user does not send empty values
   const pathHandling = () => {
-    if (city.isValid && address.isValid && postalCode.isValid && phone.isValid) {
+    if (
+      city.isValid &&
+      address.isValid &&
+      postalCode.isValid &&
+      phone.isValid
+    ) {
       // Save values in local storage
       localStorage.setItem("address", address.value);
       localStorage.setItem("city", city.value);
@@ -78,7 +81,7 @@ const Address = () => {
             <input
               className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
               type="text"
-              value={city.value?.trim()}
+              value={city.value}
               onChange={(e) =>
                 setCity((last) => {
                   return { ...last, value: e.target.value };
@@ -95,7 +98,8 @@ const Address = () => {
                     ...last,
                     isTouched: true,
                     isValid:
-                      last.value?.length >= 2 && profileRegex.test(last.value),
+                      last.value?.trim().length >= 2 &&
+                      profileRegex.test(last.value),
                   };
                 })
               }
@@ -116,7 +120,7 @@ const Address = () => {
             <input
               className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
               type="text"
-              value={address.value?.trim()}
+              value={address.value}
               onChange={(e) =>
                 setAddress((last) => {
                   return { ...last, value: e.target.value };
@@ -132,7 +136,7 @@ const Address = () => {
                   return {
                     ...last,
                     isTouched: true,
-                    isValid: last.value?.length >= 10,
+                    isValid: last.value?.trim().length >= 10,
                   };
                 })
               }
@@ -153,7 +157,7 @@ const Address = () => {
             <input
               className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
               type="text"
-              value={postalCode.value?.trim()}
+              value={postalCode.value}
               onChange={(e) =>
                 setPostalCode((last) => {
                   return { ...last, value: e.target.value };
@@ -194,7 +198,7 @@ const Address = () => {
             <input
               className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
               type="text"
-              value={phone.value?.trim()}
+              value={phone.value}
               onChange={(e) =>
                 setPhone((last) => {
                   return { ...last, value: e.target.value };
@@ -217,13 +221,9 @@ const Address = () => {
                 })
               }
             ></input>
-            {!phone.isValid &&
-              phone.isTouched &&
-              phone.value && (
-                <span className="text-base	text-red-600">
-                  {phone.error}
-                </span>
-              )}
+            {!phone.isValid && phone.isTouched && phone.value && (
+              <span className="text-base	text-red-600">{phone.error}</span>
+            )}
           </div>
         </div>
         <div className="md:flex md:items-center mb-6">
