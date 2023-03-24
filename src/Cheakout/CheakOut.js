@@ -22,7 +22,7 @@ const CheakOut = () => {
   const cheak = async () => {
     try {
       const { data } = await axios.post(
-        "https://kzico.runflare.run/order/submit",
+        "http://kzico.runflare.run/order/submit",
         {
           orderItems: cart.cart.map((item) => {
             return {
@@ -72,18 +72,19 @@ const CheakOut = () => {
       dispatch(clear());
       navigate("/");
     } catch (error) {
-      toast("you most forgot something", {
-        position: "top-center",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-        type: "error",
+      error.response.data.message?.map((item) => {
+        toast(item, {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          type: "error",
+        });
       });
-      console.log(error.response.data.message);
     }
   };
   // ____________________________________________________________________________________
@@ -95,7 +96,26 @@ const CheakOut = () => {
        If there is no product in the user's shopping cart, it will take the user to the home page */
   const done = () => {
     if (cart.cart.length) {
-      cheak();
+      if (
+        localStorage.getItem("address") &&
+        localStorage.getItem("city") &&
+        localStorage.getItem("postalCode") &&
+        localStorage.getItem("phone")
+      ) {
+        cheak();
+      } else {
+        toast("All of the fields of Shipping address must filled", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          type: "warning",
+        });
+      }
     } else {
       toast("three is no product in your cart", {
         position: "top-center",
@@ -115,6 +135,10 @@ const CheakOut = () => {
   // function for editing shipping information
   const EditShipping = () => {
     navigate("/address");
+    localStorage.removeItem("address");
+    localStorage.removeItem("city");
+    localStorage.removeItem("postalCode");
+    localStorage.removeItem("phone");
     toast("you can edit your shipping address", {
       position: "top-center",
       autoClose: 3000,

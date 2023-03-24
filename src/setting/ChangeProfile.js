@@ -107,7 +107,7 @@ const ChangeProfile = () => {
     ) {
       req();
     } else
-      toast("", {
+      toast("All of these fields are require and most be valid", {
         position: "top-center",
         autoClose: 3000,
         hideProgressBar: false,
@@ -116,7 +116,7 @@ const ChangeProfile = () => {
         draggable: true,
         progress: undefined,
         theme: "colored",
-        type: "error",
+        type: "warning",
       });
   };
 
