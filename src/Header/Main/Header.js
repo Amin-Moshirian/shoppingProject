@@ -44,7 +44,7 @@ const Header = () => {
 
           <div className="flex">
             <div className="py-3">
-              {data.success && (
+              {localStorage.getItem("Token") && (
                 <div>
                   <img
                     src={data.user?.image}
@@ -75,7 +75,7 @@ const Header = () => {
               </div>
             </div>
 
-            {data.success ? (
+            {localStorage.getItem("Token") ? (
               <div className="mt-5 lg:ml-8 md:ml-6 sm:ml-4 xsm:ml-4 xxsm:ml-4">
                 <Menu as="div" className="relative inline-block text-left">
                   <div>

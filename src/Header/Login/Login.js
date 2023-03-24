@@ -13,7 +13,7 @@ const Login = () => {
   const login = async () => {
     try {
       const { data } = await axios.post(
-        "https://kzico.runflare.run/user/login",
+        "http://kzico.runflare.run/user/login",
         {
           email: email,
           password: password,

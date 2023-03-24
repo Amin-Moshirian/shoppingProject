@@ -22,7 +22,7 @@ const CheakOut = () => {
   const cheak = async () => {
     try {
       const { data } = await axios.post(
-        "https://kzico.runflare.run/order/submit",
+        "http://kzico.runflare.run/order/submit",
         {
           orderItems: cart.cart.map((item) => {
             return {
@@ -83,6 +83,7 @@ const CheakOut = () => {
         theme: "colored",
         type: "error",
       });
+      console.log(error.response.data.message);
     }
   };
   // ____________________________________________________________________________________
@@ -138,7 +139,7 @@ const CheakOut = () => {
           >
             <div className="xxsm:flex-col xsm:flex-col sm:flex-col  md:flex-col lg:flex-col xl:flex-row flex justify-between items-center h-auto">
               <div>
-                <img src={item.image} className="w-40 pb-4 p-2"></img>
+                <img src={item.image} className="w-40 h-32 pb-4 p-2"></img>
               </div>
               <div className="xl:text-left lg:text-center md:text-center sm:text-center xsm:text-center xxsm:text-center">
                 <p className="m-3 lg:text-xl md:text-xl sm:text-xl xsm:text-base	 xxsm:text-base">

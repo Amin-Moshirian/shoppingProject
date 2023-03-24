@@ -11,7 +11,7 @@ const Order = () => {
   const req = async () => {
     setLoading(true);
     try {
-      const { data } = await axios.get("https://kzico.runflare.run/order/", {
+      const { data } = await axios.get("http://kzico.runflare.run/order/", {
         headers: {
           authorization: `bearer ${localStorage.getItem("Token")}`,
         },
@@ -76,7 +76,7 @@ const Order = () => {
                       className="flex py-6 border-b border-black  xl:flex-row lg:flex-col md:flex-col sm:flex-col xsm:flex-col xxsm:flex-col"
                     >
                       <div>
-                        <img src={i.product.image} className="w-52  p-6"></img>
+                        <img src={i.product.image} className="w-52 h-44 p-6"></img>
                       </div>
                       <div>
                         <p className="px-4 my-4 text-lg font-normal">

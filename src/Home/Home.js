@@ -47,7 +47,7 @@ const Home = () => {
                 >
                   <div className="flex flex-col justify-center items-center">
                     <img
-                      className="xl:w-72 lg:w-64 md:w-60 sm:w-56 xsm:w-52 xxsm:w-48  my-8"
+                      className="xl:w-72 lg:w-64 md:w-60 sm:w-56 xsm:w-52 xxsm:w-48  my-8 h-64"
                       src={item.image}
                     ></img>
                     <p className="mb-8 lg:text-4xl md:text-3xl sm:text-2xl xsm:text-2xl xxsm:text-2xl  text-center	">

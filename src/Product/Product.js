@@ -19,7 +19,7 @@ const Product = () => {
         >
           <div className="flex flex-col justify-center items-center">
             <img
-              className="xl:w-72 lg:w-64 md:w-60 sm:w-56 xsm:w-52 xxsm:w-48 my-8"
+              className="xl:w-72 lg:w-64 md:w-60 sm:w-56 xsm:w-52 xxsm:w-48 h-64 my-8"
               src={item.image}
             ></img>
             <p className="mb-8 text-center sm: text-2xl md:text-2xl lg:text-4xl">

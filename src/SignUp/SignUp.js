@@ -32,7 +32,7 @@ const SignUp = () => {
     value: "",
     isTouched: false,
     error:
-      "Password must contain at least one letter, at least one number, and be longer than six charaters.",
+      "Password must Minimum eight characters, at least one letter, one number and one special character.",
     isValid: false,
   });
   // ______________________________________________________________________________
@@ -60,7 +60,7 @@ const SignUp = () => {
   const req = async () => {
     try {
       const { data } = await axios.post(
-        "https://kzico.runflare.run/user/signup",
+        "http://kzico.runflare.run/user/signup",
         {
           username: userName.value,
           email: email.value,
@@ -81,7 +81,7 @@ const SignUp = () => {
       });
       navgate("/login");
     } catch (error) {
-      toast("Sign up failed because: " + error.message, {
+      toast("Sign up failed because: " + error.response.data.message, {
         position: "top-center",
         autoClose: 3000,
         hideProgressBar: false,
@@ -98,7 +98,7 @@ const SignUp = () => {
   // Regexes
   const userNameRegex = /^(?=[a-zA-Z0-9._]{5,20}$)(?!.*[_.]{2})[^_.].*[^_.]$/;
   const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-  const passwordRegex = /^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/;
+  const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
   const phoneNumberRegex = /^(?:0|98|\+98|\+980|0098|098|00980)?(9\d{9})$/;
   //________________________________________________________________________________
   return (
@@ -312,8 +312,18 @@ const SignUp = () => {
                   email.isValid &&
                   password.isValid &&
                   confirmPassword.isValid &&
-                  mobile.isValid &&
-                  req()
+                  mobile.isValid ?
+                  req() : toast("All of these fields are require and most be valid", {
+                    position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                    type: "error",
+                  })
                 }
                 type="submit"
               >

@@ -13,7 +13,7 @@ const UploadAvatar = () => {
     formData.append("profile-image", pic);
     try {
       const { data } = await axios.post(
-        "https://kzico.runflare.run/user/profile-image",
+        "http://kzico.runflare.run/user/profile-image",
         formData,
         {
           headers: {
