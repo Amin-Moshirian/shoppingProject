@@ -22,7 +22,7 @@ const CheakOut = () => {
   const cheak = async () => {
     try {
       const { data } = await axios.post(
-        "https://kzico.runflare.run/order/submit",
+        "http://localhost:3000/order/submit",
         {
           orderItems: cart.cart.map((item) => {
             return {
@@ -72,19 +72,20 @@ const CheakOut = () => {
       dispatch(clear());
       navigate("/");
     } catch (error) {
-      error.response.data.message?.map((item) => {
-        toast(item, {
-          position: "top-center",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-          type: "error",
-        });
-      });
+      console.log(error);
+      // error.response.data.message?.map((item) => {
+      //   toast(item, {
+      //     position: "top-center",
+      //     autoClose: 3000,
+      //     hideProgressBar: false,
+      //     closeOnClick: true,
+      //     pauseOnHover: true,
+      //     draggable: true,
+      //     progress: undefined,
+      //     theme: "colored",
+      //     type: "error",
+      //   });
+      // });
     }
   };
   // ____________________________________________________________________________________

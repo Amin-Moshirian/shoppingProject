@@ -8,10 +8,10 @@ const ChangePassword = () => {
   const req = async () => {
     try {
       const { data } = await axios.put(
-        "https://kzico.runflare.run/user/change-password",
+        "http://localhost:3000/user/change-password",
         {
-          old_password: oldPassword,
-          new_password: newPassword,
+          oldPassword: oldPassword,
+          newPassword: newPassword,
         },
         {
           headers: {

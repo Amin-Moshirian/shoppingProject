@@ -47,7 +47,7 @@ const Header = () => {
               {localStorage.getItem("Token") && (
                 <div>
                   <img
-                    src={data.user?.image}
+                    src={data?.avatar}
                     className="w-14 h-14 rounded-full"
                   ></img>
                 </div>

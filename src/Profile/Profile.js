@@ -17,27 +17,27 @@ const Profile = () => {
       <div className="flex flex-col items-center">
         <div>
           <img
-            src={data.user?.image}
+            src={data?.avatar}
             className="w-36 h-36 my-3 rounded-full"
           ></img>
         </div>
-        <p className="font-medium my-3">Email: {data.user?.email}</p>
-        <p className="font-medium my-3">Username: {data.user?.username}</p>
-        <p className="font-medium my-3">Mobile: {data.user?.mobile}</p>
-        {data.user?.firstname && (
-          <p className="font-medium my-3">First name: {data.user?.firstname}</p>
+        <p className="font-medium my-3">Email: {data?.email}</p>
+        <p className="font-medium my-3">Username: {data?.username}</p>
+        <p className="font-medium my-3">Mobile: {data?.mobile}</p>
+        {data?.firstName && (
+          <p className="font-medium my-3">First name: {data?.firstName}</p>
         )}
-        {data.user?.lastname && (
-          <p className="font-medium my-3">Last name: {data.user?.lastname}</p>
+        {data?.lastName && (
+          <p className="font-medium my-3">Last name: {data?.lastName}</p>
         )}
-        {data.user?.gender && (
-          <p className="font-medium my-3">Gender: {data.user?.gender}</p>
+        {data?.gender && (
+          <p className="font-medium my-3">Gender: {data?.gender}</p>
         )}
-        {data.user?.city && (
-          <p className="font-medium my-3">City: {data.user?.city}</p>
+        {data?.city && (
+          <p className="font-medium my-3">City: {data?.city}</p>
         )}
-        {data.user?.age && (
-          <p className="font-medium my-3">Age: {data.user?.age}</p>
+        {data?.age && (
+          <p className="font-medium my-3">Age: {data?.age}</p>
         )}
       </div>
     </div>

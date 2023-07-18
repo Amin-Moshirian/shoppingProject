@@ -10,17 +10,17 @@ const UploadAvatar = () => {
   const navigate = useNavigate();
   const req = async () => {
     const formData = new FormData();
-    formData.append("profile-image", pic);
+    formData.append("avatar", pic);
     try {
       const { data } = await axios.post(
-        "https://kzico.runflare.run/user/profile-image",
+        "http://localhost:3000/user/upload-avatar",
         formData,
         {
           headers: {
             authorization: `bearer ${localStorage.getItem("Token")}`,
           },
         }
-      );
+        );
       toast(data.message, {
         position: "top-center",
         autoClose: 3000,

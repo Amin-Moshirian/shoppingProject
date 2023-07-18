@@ -7,11 +7,10 @@ const Order = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-
   const req = async () => {
     setLoading(true);
     try {
-      const { data } = await axios.get("https://kzico.runflare.run/order/", {
+      const { data } = await axios.get("http://localhost:3000/order/", {
         headers: {
           authorization: `bearer ${localStorage.getItem("Token")}`,
         },
@@ -91,9 +90,9 @@ const Order = () => {
                         <p className="px-4 my-4 text-lg font-normal">
                           Category: {i.product.category}
                         </p>
-                        <p className="px-4 my-4 text-lg font-normal">
+                        {/* <p className="px-4 my-4 text-lg font-normal">
                           Description: {i.product.description}
-                        </p>
+                        </p> */}
                         <p className="px-4 my-4 text-lg font-normal">
                           Price: {i.product.price}$
                         </p>
@@ -110,34 +109,34 @@ const Order = () => {
                 <div className="flex p-6 justify-between items-center xl:flex-row lg:flex-col md:flex-col sm:flex-col xsm:flex-col xxsm:flex-col">
                   <div className="xl:ml-6 xl:text-left lg:text-center md:text-center sm:text-center xsm:text-center xxsm:text-center">
                     <p className="mb-4 text-lg font-normal">
-                      City: {item.shippingAddress.city}
+                      City: {item?.shippingAddress?.city}
                     </p>
                     <p className="my-4 text-lg font-normal">
-                      Address: {item.shippingAddress.address}
+                      Address: {item?.shippingAddress?.address}
                     </p>
                     <p className="my-4 text-lg font-normal">
-                      Phone: {item.shippingAddress.phone}
+                      Phone: {item?.shippingAddress?.phone}
                     </p>
                     <p className="my-4 text-lg font-normal">
-                      Postal code: {item.shippingAddress.postalCode}
+                      Postal code: {item?.shippingAddress?.postalCode}
                     </p>
                   </div>
                   <div className="xl:mr-6 xl:text-left lg:text-center md:text-center sm:text-center xsm:text-center xxsm:text-center">
                     <p className="mb-4 text-lg font-normal">
-                      Payment method: {item.paymentMethod}
+                      Payment method: {item?.paymentMethod}
                     </p>
                     <p className="my-4 text-lg font-normal">
-                      Shipping price: {item.shippingPrice}$
+                      Shipping price: {item?.shippingPrice}$
                     </p>
                     <p className="my-4 text-lg font-normal">
-                      Total price: {item.totalPrice}$
+                      Total price: {item?.totalPrice}$
                     </p>
                   </div>
                 </div>
                 <div className="flex justify-center pb-8">
                   <button
                     class="bg-gray-900 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-full"
-                    onClick={() => navigate(`/orders/${item._id}`)}
+                    onClick={() => navigate(`/orders/${item?._id}`)}
                   >
                     View
                   </button>

@@ -13,13 +13,13 @@ const Login = () => {
   const login = async () => {
     try {
       const { data } = await axios.post(
-        "https://kzico.runflare.run/user/login",
+        "http://localhost:3000/user/login",
         {
-          email: email,
+          userName: email,
           password: password,
         }
       );
-      localStorage.setItem("Token", `${data.user.token}`);
+      localStorage.setItem("Token", `${data.token}`);
       dispatch(getProfile());
       navigate("/");
       toast("Logged in succsessfully", {

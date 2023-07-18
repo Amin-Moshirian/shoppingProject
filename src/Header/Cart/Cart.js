@@ -25,7 +25,7 @@ const Cart = () => {
    it is no longer necessary to enter it.
     It also checks that the shopping cart is empty and the user is online.*/
   const pathHandler = () => {
-    if (data.success) {
+    if (data.token) {
       if (!cart.cart.length) {
         toast("three is no product in your cart", {
           position: "top-center",

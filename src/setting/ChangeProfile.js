@@ -37,10 +37,10 @@ const ChangeProfile = () => {
   const req = async () => {
     try {
       const { data } = await axios.put(
-        "https://kzico.runflare.run/user/change-profile",
+        "http://localhost:3000/user/change-profile",
         {
-          firstname: firstName.value,
-          lastname: lastName.value,
+          firstName: firstName.value,
+          lastName: lastName.value,
           gender: gender.value,
           age: age.value,
           city: city.value,
@@ -78,8 +78,7 @@ const ChangeProfile = () => {
         return { ...last, value: "" };
       });
     } catch (error) {
-      error.response.data.message?.map((item) => {
-        return toast(item, {
+          toast(error.response.data.message, {
           position: "top-center",
           autoClose: 3000,
           hideProgressBar: false,
@@ -90,7 +89,6 @@ const ChangeProfile = () => {
           theme: "colored",
           type: "error",
         });
-      });
     }
   };
 

@@ -9,7 +9,7 @@ export const getData = () => async (dispatch) => {
       type: "loading",
       payload: { data: [], loading: true, error: "" },
     });
-    const { data } = await axios.get("https://kzico.runflare.run/product/");
+    const { data } = await axios.get("http://localhost:3000/product/");
     dispatch({
       type: "succses",
       payload: { data: [...data], loading: false, error: "" },
@@ -27,14 +27,14 @@ export const getData = () => async (dispatch) => {
 export const getProfile = () => async (dispatch, getState) => {
   try {
     const { data } = await axios.get(
-      "https://kzico.runflare.run/user/profile",
+      "http://localhost:3000/user/get-profile",
       {
         headers: {
           Authorization: `bearer ${localStorage.getItem("Token")}`,
         },
       }
-    );
-    localStorage.setItem("user", JSON.stringify(data.user));
+      );
+    localStorage.setItem("user", JSON.stringify(data));
     dispatch({
       type: "succses-login",
       payload: { data: { ...data }, error: "" },
